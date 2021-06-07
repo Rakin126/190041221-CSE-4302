@@ -6,14 +6,12 @@ class Counter
 public:
     void setIncrementStep(int step_val)
     {
-       a=step_val;
-       void increment(int a);
+       count=count+step_val;
     }
-    void increment(int a)
+   /* void increment()
     {
-        count=count+a;
-        return;
-    }
+        count=count;
+    } */
     int getCount()
     {
         return count;
@@ -24,7 +22,7 @@ public:
     }
 private:
     int count;
-    int a;
+    int x=0;
 
 };
 
