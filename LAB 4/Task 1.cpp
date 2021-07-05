@@ -3,70 +3,71 @@ using namespace std;
 
 class Calculator
 {
+
 private:
     int ans;
+
 public:
     Calculator()
     {
         ans=0;
     }
-    Calculator(int val)
-    {
-        ans=val;
-    }
+
+
     void geValue()
     {
-        cout<<"Enter the value";
+        cout<<"Enter the value"<<endl;
         cin>>ans;
     }
 
-    void setValue(int Value)
+    void setValue(int val)
     {
-        ans=Value;
+        ans=val;
     }
-    void add (int Value)
+
+    void add (int val)
     {
-        ans=ans+Value;
+        ans=ans+val;
     }
-    void subtract (int Value)
+
+    void subtract (int val)
     {
-        ans=ans-Value;
+        ans=ans-val;
     }
-    void multiply (int Value)
+
+    void multiply (int val)
     {
-        ans=ans*Value;
+        ans=ans*val;
     }
-    void divideBy(int Value)
+
+    void divideBy(int val)
     {
-        if(Value==0)
+        if(val==0)
         {
             cout<<"Error : divide by 0 is undefined."<<endl;
-
         }
         else
         {
-             ans=ans/Value;
+            ans=ans/val;
         }
     }
 
     void display()
     {
 
-        cout<<"Calculator display: ";
+        cout<<"Calculator display:";
         cout<< ans <<endl;
     }
-
 
     void clear()
     {
         ans=0;
     }
+
     ~Calculator()
     {
         cout<<"Calculator object is destroyed."<<endl;
     }
-
-
 };
 
 
@@ -75,6 +76,9 @@ public:
 int main()
 {
     Calculator cal;
+
+    // cal.geValue();
+
     cal.add(10);
     cal.display();
 
@@ -102,5 +106,5 @@ int main()
     cal.clear();
     cal.display();
 
-    return 0;
+
 }
